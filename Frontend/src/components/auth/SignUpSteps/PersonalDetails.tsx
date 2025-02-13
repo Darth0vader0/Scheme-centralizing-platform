@@ -222,6 +222,95 @@ export const PersonalDetails: React.FC<PersonalDetailsProps> = ({
           <option value="No">No</option>
         </select>
       </div>
+      <div>
+        <label htmlFor="motherTongue" className="block text-sm font-medium text-gray-700">
+          Mother Tongue
+        </label>
+        <input
+          type="text"
+          id="motherTongue"
+          value={formData.motherTongue}
+          onChange={(e) => setFormData({ ...formData, motherTongue: e.target.value })}
+          className="mt-1 block w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:ring-orange-500 focus:border-orange-500"
+          placeholder="Enter your mother tongue"
+        />
+      </div>
+      
+      <div>
+        <label htmlFor="livingAreaType" className="block text-sm font-medium text-gray-700">
+          Living Area Type
+        </label>
+        <select
+          id="livingAreaType"
+          value={formData.livingAreaType}
+          onChange={(e) => setFormData({ ...formData, livingAreaType: e.target.value })}
+          className="mt-1 block w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:ring-orange-500 focus:border-orange-500"
+        >
+          <option value="">Select</option>
+          <option value="Slum">Slum</option>
+          <option value="Resettlement Colony">Resettlement Colony</option>
+          <option value="Standard Housing">Standard Housing</option>
+        </select>
+      </div>
+
+      <div>
+        <label htmlFor="orphanWidowStatus" className="block text-sm font-medium text-gray-700">
+          Orphan/Widow Status
+        </label>
+        <select
+          id="orphanWidowStatus"
+          value={formData.orphanWidowStatus}
+          onChange={(e) => setFormData({ ...formData, orphanWidowStatus: e.target.value })}
+          className="mt-1 block w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:ring-orange-500 focus:border-orange-500"
+        >
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+      </div>
+
+      <div>
+        <label htmlFor="singleParent" className="block text-sm font-medium text-gray-700">
+          Single Parent Family?
+        </label>
+        <select
+          id="singleParent"
+          value={formData.singleParent}
+          onChange={(e) => setFormData({ ...formData, singleParent: e.target.value })}
+          className="mt-1 block w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:ring-orange-500 focus:border-orange-500"
+        >
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+      </div>
+
+      <div>
+        <label htmlFor="numberOfSiblings" className="block text-sm font-medium text-gray-700">
+          Number of Siblings
+        </label>
+        <input
+          type="number"
+          id="numberOfSiblings"
+          value={formData.numberOfSiblings}
+          onChange={(e) => setFormData({ ...formData, numberOfSiblings: e.target.value })}
+          className="mt-1 block w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:ring-orange-500 focus:border-orange-500"
+          placeholder="Enter number of siblings"
+        />
+      </div>
+
+      <div>
+        <label htmlFor="governmentBenefits" className="block text-sm font-medium text-gray-700">
+          Does your family receive any government benefits?
+        </label>
+        <select
+          id="governmentBenefits"
+          value={formData.governmentBenefits}
+          onChange={(e) => setFormData({ ...formData, governmentBenefits: e.target.value })}
+          className="mt-1 block w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:ring-orange-500 focus:border-orange-500"
+        >
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+      </div>
 
       <div>
         <label htmlFor="firstGenerationLearner" className="block text-sm font-medium text-gray-700">
