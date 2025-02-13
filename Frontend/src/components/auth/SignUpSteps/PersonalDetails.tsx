@@ -7,6 +7,20 @@ interface PersonalDetailsProps {
     city: string;
     annualIncome: string;
     category: string;
+    pincode: string;
+    nationality: string;
+    religion: string;
+    motherTongue: string;
+    livingAreaType: string;
+    orphanWidowStatus: string;
+    singleParent: string;
+    numberOfSiblings: string;
+    governmentBenefits: string;
+    rationCardType: string;
+    minorityCommunity: string;
+    tribalCommunity: string;
+    warWidowOrVeteranChild: string;
+    firstGenerationLearner: string;
   };
   setFormData: (data: any) => void;
   onNext: () => void;
@@ -130,6 +144,98 @@ export const PersonalDetails: React.FC<PersonalDetailsProps> = ({
           ))}
         </div>
         {errors.category && <p className="mt-1 text-sm text-red-600">{errors.category}</p>}
+      </div>
+      <div>
+      <label htmlFor="pincode" className="block text-sm font-medium text-gray-700">
+          Pincode
+        </label>
+        <input
+          type="text"
+          id="pincode"
+          value={formData.pincode}
+          onChange={(e) => setFormData({ ...formData, pincode: e.target.value })}
+          className="mt-1 block w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:ring-orange-500 focus:border-orange-500"
+          placeholder="Enter your pincode"
+        />
+      </div>
+
+      <div>
+        <label htmlFor="nationality" className="block text-sm font-medium text-gray-700">
+          Nationality
+        </label>
+        <input
+          type="text"
+          id="nationality"
+          value={formData.nationality}
+          onChange={(e) => setFormData({ ...formData, nationality: e.target.value })}
+          className="mt-1 block w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:ring-orange-500 focus:border-orange-500"
+          placeholder="Enter your nationality"
+        />
+      </div>
+      
+      <div>
+        <label htmlFor="religion" className="block text-sm font-medium text-gray-700">
+          Religion
+        </label>
+        <input
+          type="text"
+          id="religion"
+          value={formData.religion}
+          onChange={(e) => setFormData({ ...formData, religion: e.target.value })}
+          className="mt-1 block w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:ring-orange-500 focus:border-orange-500"
+          placeholder="Enter your religion"
+        />
+      </div>
+      
+      <div>
+        <label htmlFor="minorityCommunity" className="block text-sm font-medium text-gray-700">
+          Are you from a Minority Community?
+        </label>
+        <select
+          id="minorityCommunity"
+          value={formData.minorityCommunity}
+          onChange={(e) => setFormData({ ...formData, minorityCommunity: e.target.value })}
+          className="mt-1 block w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:ring-orange-500 focus:border-orange-500"
+        >
+          <option value="">Select</option>
+          <option value="Muslim">Muslim</option>
+          <option value="Sikh">Sikh</option>
+          <option value="Christian">Christian</option>
+          <option value="Buddhist">Buddhist</option>
+          <option value="Jain">Jain</option>
+          <option value="Parsi">Parsi</option>
+          <option value="None">None</option>
+        </select>
+      </div>
+
+      <div>
+        <label htmlFor="tribalCommunity" className="block text-sm font-medium text-gray-700">
+          Are you from a Tribal Community?
+        </label>
+        <select
+          id="tribalCommunity"
+          value={formData.tribalCommunity}
+          onChange={(e) => setFormData({ ...formData, tribalCommunity: e.target.value })}
+          className="mt-1 block w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:ring-orange-500 focus:border-orange-500"
+        >
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+      </div>
+
+      <div>
+        <label htmlFor="firstGenerationLearner" className="block text-sm font-medium text-gray-700">
+          Are you a First-Generation Learner?
+        </label>
+        <select
+          id="firstGenerationLearner"
+          value={formData.firstGenerationLearner}
+          onChange={(e) => setFormData({ ...formData, firstGenerationLearner: e.target.value })}
+          className="mt-1 block w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:ring-orange-500 focus:border-orange-500"
+        >
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
       </div>
 
       <div className="flex gap-4">

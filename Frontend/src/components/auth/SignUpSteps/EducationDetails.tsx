@@ -7,6 +7,7 @@ interface EducationDetailsProps {
     employmentStatus: string;
     institute: string;
     sector: string;
+    fathersProfession: string;
   };
   setFormData: (data: any) => void;
   onSubmit: () => void;
@@ -23,9 +24,11 @@ export const EducationDetails: React.FC<EducationDetailsProps> = ({
     educationLevel: '',
     fieldOfStudy: '',
     employmentStatus: '',
+    fathersProfession :"",
   });
 
   const educationLevels = ['School', 'Diploma', 'Undergraduate', 'Postgraduate', 'PhD'];
+  const professions = ['Farmer', 'Businessman', 'Government Employee', 'Private Employee', 'Other'];
   const fieldsOfStudy = [
     'Engineering',
     'Medicine',
@@ -57,6 +60,7 @@ export const EducationDetails: React.FC<EducationDetailsProps> = ({
       educationLevel: !formData.educationLevel ? 'Please select your education level' : '',
       fieldOfStudy: !formData.fieldOfStudy ? 'Please select your field of study' : '',
       employmentStatus: !formData.employmentStatus ? 'Please select your employment status' : '',
+      fathersProfession: !formData.fathersProfession ? 'Please select father`s profession' : '',
     };
 
     setErrors(newErrors);
@@ -179,6 +183,21 @@ export const EducationDetails: React.FC<EducationDetailsProps> = ({
           </select>
         </div>
       )}
+       <div>
+        <label className="block text-sm font-medium text-gray-700">Father’s Profession</label>
+        <select
+          value={formData.fathersProfession}
+          onChange={(e) => setFormData({ ...formData, fathersProfession: e.target.value })}
+          className="mt-1 block w-full py-2 px-3 border border-gray-300 rounded-md shadow-sm focus:ring-orange-500 focus:border-orange-500"
+        >
+          <option value="">Select Profession</option>
+          {professions.map((prof) => (
+            <option key={prof} value={prof}>{prof}</option>
+          ))}
+        </select>
+        {errors.fathersProfession && <p className="mt-1 text-sm text-red-600">{errors.fathersProfession}</p>}
+      </div>
+
 
       <div className="flex gap-4">
         <button
@@ -192,7 +211,7 @@ export const EducationDetails: React.FC<EducationDetailsProps> = ({
           type="submit"
           className="flex-1 py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-orange-600 hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500"
         >
-          Submit
+          submit
         </button>
       </div>
     </form>

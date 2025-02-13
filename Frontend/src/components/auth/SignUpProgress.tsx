@@ -9,7 +9,9 @@ export const SignUpProgress: React.FC<SignUpProgressProps> = ({ currentStep }) =
   const steps = [
     { number: 1, title: 'Basic Info' },
     { number: 2, title: 'Personal Details' },
-    { number: 3, title: 'Education' },
+    { number: 3, title: 'Education details' },
+  
+  
   ];
 
   return (

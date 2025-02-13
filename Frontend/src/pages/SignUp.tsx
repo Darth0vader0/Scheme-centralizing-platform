@@ -23,6 +23,28 @@ export const SignUp = () => {
     employmentStatus: '',
     institute: '',
     sector: '',
+    // Employment & Family Background
+    jobType: '',
+    existingLoan: '',
+    fathersProfession: '',
+    // Additional Personal Details
+    pincode: '',
+    nationality: '',
+    religion: '',
+    motherTongue: '',
+    livingAreaType: '',
+    orphanWidowStatus: '',
+    differentlyAbled: '',
+    maritalStatus: '',
+    familyIncome: '',
+    familyMembers: '',
+    firstGenerationLearner: '',
+    singleParent: '',
+    numberOfSiblings: '',
+    governmentBenefits: '',
+    rationCardType: '',
+    familyHeadName: '',
+    familyHeadOccupation: '',
   });
 
   const handleNext = () => {
@@ -34,7 +56,7 @@ export const SignUp = () => {
   };
 
   const handleSubmit = () => {
-    // Handle form submission here
+    // Handle final form submission
     console.log('Form submitted:', formData);
   };
 
@@ -55,14 +77,10 @@ export const SignUp = () => {
       <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
         <div className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
           <SignUpProgress currentStep={currentStep} />
-          
+
           <div className="mt-8">
             {currentStep === 1 && (
-              <BasicInfo
-                formData={formData}
-                setFormData={setFormData}
-                onNext={handleNext}
-              />
+              <BasicInfo formData={formData} setFormData={setFormData} onNext={handleNext} />
             )}
             {currentStep === 2 && (
               <PersonalDetails
@@ -80,6 +98,7 @@ export const SignUp = () => {
                 onBack={handleBack}
               />
             )}
+           
           </div>
         </div>
       </div>
@@ -87,4 +106,4 @@ export const SignUp = () => {
   );
 };
 
-export default SignUp
+export default SignUp;
