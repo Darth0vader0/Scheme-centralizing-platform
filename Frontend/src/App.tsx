@@ -5,6 +5,7 @@ import { SignUp } from './pages/SignUp'; // Assuming Signup is a TSX component
 import { Home } from './pages/Home'; // Assuming ServerPage is a TSX component
 import { SuggestedSchemes } from './pages/SuggestedSchemes';
 import { Admin } from './pages/Admin';
+import {UserDashboard} from './pages/UserDashboard';
 const App: React.FC = () => {
   return (
     <Router>
@@ -14,6 +15,7 @@ const App: React.FC = () => {
         <Route path="/Home" element={<Home />} />
         <Route path='/SchemePage' element={<SuggestedSchemes />} />  
         <Route path='/admin' element={<Admin />} />  
+        <Route path='/UserDashboard' element={<UserDashboard />} />  
         {/* Redirect to login if no path matches */}
         <Route path="/" element={<Navigate to="/Home" replace />} />
       </Routes>

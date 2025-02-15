@@ -20,7 +20,7 @@ export const AdminHeader = () => {
             <div className="border-l border-gray-200 h-6 mx-2"></div>
             <button className="flex items-center gap-2 text-gray-700 hover:text-gray-900">
               <img
-                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                src="https://ih0.redbubble.net/image.4702490221.5192/raf,360x360,075,t,fafafa:ca443f4786.jpg"
                 alt="Admin"
                 className="w-8 h-8 rounded-full"
               />

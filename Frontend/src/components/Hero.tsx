@@ -9,7 +9,7 @@ export const Hero = () => {
     <div 
       className="relative min-h-[600px] flex items-center justify-center bg-gradient-to-r from-orange-50 to-orange-100"
       style={{
-        backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('https://images.unsplash.com/photo-1532375810709-75b1da00537c?auto=format&fit=crop&q=80')`,
+        backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.9)), url('https://images.unsplash.com/photo-1532375810709-75b1da00537c?auto=format&fit=crop&q=80')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
